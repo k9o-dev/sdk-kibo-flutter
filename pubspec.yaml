@@ -1,0 +1,21 @@
+name: k9o_kibo
+description: Kilimanjaro Kibo vault SDK for Dart — client.vault.secrets.
+version: 1.5.0
+homepage: https://kilimanjaro.dev
+documentation: https://docs.kilimanjaro.dev
+repository: https://github.com/k9o-platform/k9o-kibo-flutter
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+# Pure Dart package: the vault-secrets surface is a plain authenticated REST
+# round-trip (no client-side crypto, no platform channel, no Flutter widget
+# dependency — mirrors packages/kibo (TS), which is equally UI-framework-free).
+# This lets non-Flutter Dart backends depend on it too, and keeps the test
+# suite runnable with `dart test` (no Flutter SDK required).
+dependencies:
+  http: ^1.2.0
+
+dev_dependencies:
+  test: ^1.25.0
+  lints: ^3.0.0
